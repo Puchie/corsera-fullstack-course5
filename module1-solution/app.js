@@ -31,10 +31,6 @@ function LunchCheckController($scope) {
       }
     }
   };
-
-  function select(limit, itemString, emptyChoice, okChoice, tooMuchChoice) {
-
-  };
 };
 
 })();
