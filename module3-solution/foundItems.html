@@ -1,0 +1,24 @@
+
+<table ng-show='menu.length'>
+  <tr><th>Name</th><th>Short</th><th>Description</th><th> </th></tr>
+
+  <tr ng-repeat='menuItem in menu'>
+    <td>{{menuItem.name}}</td>
+    <td>{{menuItem.short_name}}</td>
+    <td>{{menuItem.description}}</td>
+    <td>
+      <button
+        class="btn btn-primary"
+        ng-click="onRemove({ index : $index});">
+        Don't want this one!
+      </button>
+    </td>
+  </tr>
+
+</table>
+<!-- The <div> and <br> exist to put the text on a new line -->
+<!-- I don't know why the narrow-button class messes this up -->
+<!-- If you know let me know in the feedback -->
+<div ng-hide='menu.length' ><br><br>
+<h2> Nothing found</h2>
+<div>
