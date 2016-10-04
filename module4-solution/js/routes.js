@@ -16,8 +16,16 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   .state('categories', {
     url: '/categories',
-    template: '<h2>Here I am</h2>'
-    // templateUrl: 'src/MenuApp/templates/categories.template.html'
+    templateUrl: 'src/MenuApp/templates/categories.template.html',
+    controller: 'CategoriesController as catList',
+    resolve: {
+      categories: ['MenuDataService', function (MenuDataService) {
+        console.log("Evaluating resolve on: ", MenuDataService);
+        var promise = MenuDataService.getAllCategories();
+        console.log("Promise = ", promise);
+        return promise;
+      }]
+    }
   })
   ;
 
