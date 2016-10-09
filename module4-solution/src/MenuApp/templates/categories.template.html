@@ -1,5 +1,13 @@
-<h3>Available Menu Categories</h3>
+<div><a href="" ui-sref="home">Back to Welcome</a><div>
+<div><a href="" ui-sref="categories">Clear Items</a></div>
+<table>
+  <tr style="vertical-align:top">
+    <td>
+      <categories items='catList.categories'></categories>
+    </td>
 
-<ul>
-  <li ng-repeat="menuCategory in catList.categories">{{ menuCategory.name}}</li>
-</ul>
+    <td>
+      <ui-view></ui-view>
+    </td>
+  </tr>
+  <table>

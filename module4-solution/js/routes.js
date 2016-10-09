@@ -20,14 +20,21 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesController as catList',
     resolve: {
       categories: ['MenuDataService', function (MenuDataService) {
-        console.log("Evaluating resolve on: ", MenuDataService);
         var promise = MenuDataService.getAllCategories();
-        console.log("Promise = ", promise);
         return promise;
       }]
     }
   })
-  ;
-
+  .state('categories.item', {
+    url: '/{shortName}',
+    templateUrl: 'src/MenuApp/templates/items.template.html',
+    controller: 'ItemsController as itemsList',
+    resolve: {
+      items: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
+        var promise = MenuDataService.getItemsForCategory($stateParams.shortName);
+        return promise;
+      }]
+    }
+  });
 }
 })();
