@@ -37,6 +37,11 @@
 }
 /* END HOME PAGE */
 
+/* SIGNUP PAGE */
+input {
+  color: #000;
+}
+
 /* MENU CATEGORIES PAGE */
 .category-tile {
   position: relative;

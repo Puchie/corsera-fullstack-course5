@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">Sign up to our newsletter</h2>
+  <div class="text-center">
+    <form name="signupForm">
+      <input type="text" name="firstName" ng-model="signupCtrl.firstName" placeholder="First Name">
+      <br>
+      <input type="text" name="lastName" ng-model="signupCtrl.lastName" placeholder="Last Name">
+      <br>
+      <input type="text" name="address" ng-model="signupCtrl.email" placeholder="E-mail Address">
+      <br>
+      <input type="text" name="phone" ng-model="signupCtrl.phone" placeholder="Phone Number">
+      <br>
+      <input type="text" name="favourite" ng-model="signupCtrl.favourite" placeholder="Favourite menu item">
+      <br>
+      <input type="submit" value="Sign Up" ng-click="signupCtrl.signup()">
+    </form>
+    <div ng-if='signupCtrl.saved'>Your information has been saved</div>
+  </div>
+</div>
