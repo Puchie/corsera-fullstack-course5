@@ -24,7 +24,7 @@
             ng-model="signupCtrl.lastName"
             placeholder="Last Name"
             minlength=2
-            ng-maxlength="10"
+            ng-maxlength="15"
             required>
       <span ng-if="signupForm.lastName.$error.required && signupForm.lastName.$touched">
         I cannot subsribe you if you don't have a last name
@@ -65,11 +65,12 @@
         I won't know what news to tell you if you don't pick a favourite dish
       </span>
       <span ng-if="signupForm.favourite.$error.pattern && signupForm.favourite.$touched">
-        Dishes are identified by a letter and number combination (eg. G7)
+        Dishes are identified by a combination of one or two letters and one or two digits (eg. G7 or PD11)
       </span>
       <br>
-      <input type="submit" value="Sign Up" ng-disabled="signupForm.$invalid" ng-click="signupCtrl.signup()">
+      <!--input type="submit" value="Sign Up" ng-disabled="signupForm.$invalid" ng-click="signupCtrl.signup()"-->
+      <input type="submit" value="Sign Up" ng-click="signupCtrl.signup()">
     </form>
-    <div ng-if='signupCtrl.saved'>Your information has been saved</div>
+    <div ng-if='signupCtrl.message'>{{signupCtrl.message}}</div>
   </div>
 </div>

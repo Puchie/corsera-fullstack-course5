@@ -13,6 +13,8 @@ function SignupService(EMPTY) {
   $service.registration = EMPTY;
 
   $service.signup = function (details) {
+    console.log("details: ", details);
+    console.log("empty: ", EMPTY);
     $service.registration = details;
   }
 
