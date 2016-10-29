@@ -13,11 +13,11 @@ function SignupController( SignupService ) {
 
   $ctrl.saved = false;
 
-  $ctrl.firstName = "A";
-  $ctrl.lastName = "B";
-  $ctrl.email = "C";
-  $ctrl.phone = "D";
-  $ctrl.favourite = "E";
+  $ctrl.firstName = "";
+  $ctrl.lastName = "";
+  $ctrl.email = "";
+  $ctrl.phone = "";
+  $ctrl.favourite = "";
 
   $ctrl.signup = function () {
     console.log("Signing up");

@@ -38,8 +38,22 @@
 /* END HOME PAGE */
 
 /* SIGNUP PAGE */
+
 input {
   color: #000;
+}
+
+input[disabled=disabled] {
+  color: #DDD;
+  background-color: #EEE;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
 }
 
 /* MENU CATEGORIES PAGE */
