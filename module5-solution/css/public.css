@@ -38,6 +38,9 @@
 /* END HOME PAGE */
 
 /* SIGNUP PAGE */
+label {
+  width: 120px;
+}
 
 input {
   color: #000;
@@ -55,6 +58,7 @@ input[disabled=disabled] {
 .ng-touched.ng-invalid {
   border: 2px red solid;
 }
+/* END SIGNUP PAGE */
 
 /* MENU CATEGORIES PAGE */
 .category-tile {
